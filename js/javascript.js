@@ -71,7 +71,6 @@ function getCity(json) {
   for (let i = 0; i < x.length; i++) {
     const det = document.createElement("div")
     day_div.appendChild(det)
-    det.innerHTML += 'cccc'
     day_div.innerHTML += `
     <p >
         ${x[i]}
