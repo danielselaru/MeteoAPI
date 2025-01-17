@@ -68,17 +68,17 @@ function getCity(json) {
   let day = new Set(header_day);
   let x = Array.from(day);
   
-  for (let i = 0; i < x.length; i++) {
-    const det = document.createElement("div")
-    day_div.appendChild(det)
+  // for (let i = 0; i < x.length; i++) {
+  //   const det = document.createElement("div")
+  //   day_div.appendChild(det)
     
-    day_div.innerHTML += `
-    <p >
-        ${x[i]}
-    </p>
+  //   day_div.innerHTML += `
+  //   <p >
+  //       ${x[i]}
+  //   </p>
     
-    `    
-  }
+  //   `    
+  // }
     
   header_div.innerHTML = `
     <p>
