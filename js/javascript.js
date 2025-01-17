@@ -80,9 +80,9 @@ function getCity(json) {
   //   `    
   // }
     
-  header_div.innerHTML = `
-    <p>
-        ${city_name}
-    </p>`;
+  // header_div.innerHTML = `
+  //   <p>
+  //       ${city_name}
+  //   </p>`;
   // console.log(json.list)
 }
