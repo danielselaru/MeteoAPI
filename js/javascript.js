@@ -19,11 +19,21 @@ const api_city_1 = document.querySelector("#id_city");
 console.log(api_city_1);
 const btn = document.querySelector(".button");
 
+const date_div = document.querySelector(".date");
+const inputDate = document.querySelector("#birthday");
+inputDate.addEventListener("input", show);
+
+function show() {
+  let selectedDate = inputDate.value;
+  header_div.innerHTML = `<p>${selectedDate}</p>`
+}
+
+
 btn.addEventListener("click", getInputValue);
 
 // let value_city = 'Bucharest'
 function getInputValue() {
-  day_div.innerHTML=""
+  day_div.innerHTML = ""
   let value_city = api_city_1.value;
   console.log(value_city);
   apifunction(value_city);
@@ -40,7 +50,7 @@ function apifunction(value_city) {
 apifunction();
 
 function getCity(json) {
-  detalii_div.innerHTML=""
+  detalii_div.innerHTML = ""
   console.log(json);
   let city_name = json.city.name;
   let list = json.list;
@@ -52,30 +62,39 @@ function getCity(json) {
     console.log(weather[0].icon)
     let icon = weather[0].icon
     let date = new Date(element.dt_txt);
-    let hours = date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds();
+    let hours = date.getHours();
     let month = date.getMonth() + 1;
     let days = date.getDate() + "." + month;
-   
+
     header_day.push(days);
     console.log(days);
     detalii_div.innerHTML += `
         <div class="weather">
-        <p>In data ${days} la ora  ${hours} vremea va fi ${description}</p>
+        <p>In data ${days} la ora ${hours} vremea va fi ${description}</p>
         <img src="./images/${icon}.png" />
         </div>
         `;
   });
   let day = new Set(header_day);
   let x = Array.from(day);
+<<<<<<< HEAD
   
   // for (let i = 0; i < x.length; i++) {
   //   const det = document.createElement("div")
   //   day_div.appendChild(det)
     
+=======
+
+  // for (let i = 0; i < x.length; i++) {
+  //   const det = document.createElement("div")
+  //   day_div.appendChild(det)
+
+>>>>>>> test
   //   day_div.innerHTML += `
   //   <p >
   //       ${x[i]}
   //   </p>
+<<<<<<< HEAD
     
   //   `    
   // }
@@ -84,5 +103,17 @@ function getCity(json) {
   //   <p>
   //       ${city_name}
   //   </p>`;
+=======
+
+  //   `    
+  // }
+
+  header_div.innerHTML = `
+      <p>
+        ${city_name}
+      </p>
+      
+     `;
+>>>>>>> test
   // console.log(json.list)
 }
