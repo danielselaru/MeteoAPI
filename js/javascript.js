@@ -16,8 +16,11 @@ const header_div = document.querySelector(".header");
 const detalii_div = document.querySelector(".detalii");
 const day_div = document.querySelector(".day");
 const api_city_1 = document.querySelector("#id_city");
+const header_data = document.querySelector(".header_data");
+
+
 console.log(api_city_1);
-const btn = document.querySelector(".button");
+// const btn = document.querySelector(".button");
 
 const date_div = document.querySelector(".date");
 const inputDate = document.querySelector("#birthday");
@@ -25,17 +28,18 @@ inputDate.addEventListener("input", show);
 
 function show() {
   let selectedDate = inputDate.value;
-  header_div.innerHTML = `<p>${selectedDate}</p>`
+  header_data.innerHTML = `<p>${selectedDate}</p>`
 }
 
 
-btn.addEventListener("click", getInputValue);
+api_city_1.addEventListener("change", getInputValue);
+
 
 // let value_city = 'Bucharest'
-function getInputValue() {
+function getInputValue(event) {
   day_div.innerHTML = ""
   let value_city = api_city_1.value;
-  console.log(value_city);
+  console.log(event.target.value);
   apifunction(value_city);
 }
 
@@ -77,43 +81,22 @@ function getCity(json) {
   });
   let day = new Set(header_day);
   let x = Array.from(day);
-<<<<<<< HEAD
   
   // for (let i = 0; i < x.length; i++) {
   //   const det = document.createElement("div")
   //   day_div.appendChild(det)
     
-=======
-
-  // for (let i = 0; i < x.length; i++) {
-  //   const det = document.createElement("div")
-  //   day_div.appendChild(det)
-
->>>>>>> test
   //   day_div.innerHTML += `
   //   <p >
   //       ${x[i]}
   //   </p>
-<<<<<<< HEAD
     
   //   `    
   // }
     
-  // header_div.innerHTML = `
-  //   <p>
-  //       ${city_name}
-  //   </p>`;
-=======
-
-  //   `    
-  // }
-
   header_div.innerHTML = `
-      <p>
+    <p>
         ${city_name}
-      </p>
-      
-     `;
->>>>>>> test
+    </p>`;
   // console.log(json.list)
 }
