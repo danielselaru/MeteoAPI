@@ -1,16 +1,10 @@
 import { API_KEY } from "./api_key.js";
 
 // const date = new Date();
-// console.log(date.getHours() + '/' +date.getDate());
+// console.log(date.getDate()+ ' / ' + date.getMonth()+1);
 // const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'short' });
 // const formattedDate = formatter.format(date);
 // console.log(formattedDate);
-
-// let myset = new Set();
-// Append new elements to the
-// set using add() method
-// myset.add(23);
-// console.log(myset)
 
 const header_div = document.querySelector(".header");
 const detalii_div = document.querySelector(".detalii");
@@ -20,7 +14,6 @@ const header_data = document.querySelector(".header_data");
 
 
 console.log(api_city_1);
-// const btn = document.querySelector(".button");
 
 const date_div = document.querySelector(".date");
 const inputDate = document.querySelector("#birthday");
@@ -31,11 +24,9 @@ function show() {
   header_data.innerHTML = `<p>${selectedDate}</p>`
 }
 
-
 api_city_1.addEventListener("change", getInputValue);
 
 
-// let value_city = 'Bucharest'
 function getInputValue(event) {
   day_div.innerHTML = ""
   let value_city = api_city_1.value;
