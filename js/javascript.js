@@ -60,14 +60,25 @@ function getCity(json) {
     let hours = date.getHours();
     let month = date.getMonth() + 1;
     let days = date.getDate() + "." + month;
+    let temp =element.main.temp;
+    let temperature = (temp - 273.15).toFixed(2);
+    
+    let temperature_min = element.main.temp_min;
+    let temperature_max = element.main.temp_max;
+    let humidity = element.main.humidity;
+    let pressure = element.main.pressure;
+    let temperature_feels_like = element.main.feels_like
 
     header_day.push(days);
     console.log(days);
     detalii_div.innerHTML += `
-        <div class="weather">
-        <p>In data ${days} la ora ${hours} vremea va fi ${description}</p>
-        <img src="./images/${icon}.png" />
+      <div class="weather">
+        <div>
+        <p>In data ${days} la ora ${hours} vremea va fi ${description}.</p>
+        <p>Temperatura va fi ${temperature} grade.</p>
         </div>
+        <img src="./images/${icon}.png" />
+      </div>
         `;
   });
   let day = new Set(header_day);
@@ -91,3 +102,4 @@ function getCity(json) {
     </p>`;
   // console.log(json.list)
 }
+
