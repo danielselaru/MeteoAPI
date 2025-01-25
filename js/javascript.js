@@ -72,7 +72,7 @@ function getCity(json) {
     console.log(days);
     detalii_div.innerHTML += `
       <div class="weather">
-        <p>In data ${days} la ora ${hours} vremea va fi ${description}. Temperatura va fi ${temperature} </p>
+        <p>In data ${days} la ora ${hours} vremea va fi ${description}.  </p>
         <img src="./images/${icon}.png" />
       </div>
         `;
