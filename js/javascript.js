@@ -62,7 +62,6 @@ function getCity(json) {
     let days = date.getDate() + "." + month;
     let temp =element.main.temp;
     let temperature = (temp - 273.15).toFixed(2);
-    
     let temperature_min = element.main.temp_min;
     let temperature_max = element.main.temp_max;
     let humidity = element.main.humidity;
