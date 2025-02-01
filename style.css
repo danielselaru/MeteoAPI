@@ -19,7 +19,9 @@
     border: 1px solid green;
     height: 70px;
     padding-left: 10px;
+    margin: 10px;
     font-size: 20px;
+    width: 800px;
 }
 .button{
     margin-top: 0px;
@@ -30,6 +32,6 @@
     /* gap:50px; */
     /* grid-template-columns: repeat(5,1fr); */
     justify-content: space-between;
-    border: 1px solid green;
+    /* border: 1px solid green; */
     
 }

@@ -1,11 +1,5 @@
 import { API_KEY } from "./api_key.js";
 
-// const date = new Date();
-// console.log(date.getDate()+ ' / ' + date.getMonth()+1);
-// const formatter = new Intl.DateTimeFormat('en-US', { dateStyle: 'short' });
-// const formattedDate = formatter.format(date);
-// console.log(formattedDate);
-
 const header_div = document.querySelector(".header");
 const detalii_div = document.querySelector(".detalii");
 const day_div = document.querySelector(".day");
@@ -79,7 +73,7 @@ function getCity(json) {
         </div>
         <img src="./images/${icon}.png" />
       </div>
-        `;
+       `;
   });
   let day = new Set(header_day);
   let x = Array.from(day);
