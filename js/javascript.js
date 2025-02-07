@@ -71,7 +71,7 @@ function getCity(json) {
         <p>Temperatura va fi ${temperature} grade. Temperatura minima : ${temperature_min}, temperatura maxima : ${temperature_max} </p>
         <p>Se resimt ${temperature_feels_like} grade , umiditate : ${humidity} , presiune atmosferica : ${pressure}</p>
         </div>
-        <img src="./images/${icon}.png" />
+        <img class = "icon" src="./images/${icon}.png" />
       </div>
        `;
   });
