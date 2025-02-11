@@ -2,16 +2,19 @@
     margin: 0px; 
     padding: 0px;
 }
+.header{
+    font-size: 20px;
+}
 .detalii{
     /* display: grid; */
     /* grid-template-columns: 200px 200px 200px; */
     /* grid-template-columns: 1fr 1fr 1fr; */
     /* grid-template-columns: repeat(5,1fr);   */
-    padding-top: 10px;
+   
     /* border: 1px solid green; */
     
     font-size: 12.5px;
-    /* width: 400px; */
+    width: 800px;
 }
 .weather{
     display: flex;
@@ -19,7 +22,7 @@
     
     margin: 10px;
     font-size: 20px;
-    width: 1000px;
+   
 }
 .button{
     margin-top: 0px;
@@ -34,5 +37,17 @@
     
 }
 .icon{
-    width: 49px;
+    width: 50px;
+}
+.page{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 1px;
+  
+}
+.picture{
+    
+    width: 300px;
+    margin-left: 300px;
 }
